@@ -1,0 +1,36 @@
+@import "./button";
+@import "./media";
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  background-color: #777;
+  align-items: center;
+
+  .logo {
+    font-size: 30px;
+  }
+  .menu {
+    opacity: 0;
+    @include phone {
+      opacity: 1;
+    }
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    @include phone {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      padding: 0 10px;
+    }
+
+    button {
+      color: white;
+    }
+  }
+}
